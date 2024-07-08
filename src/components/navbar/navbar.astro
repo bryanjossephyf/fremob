@@ -4,37 +4,35 @@ import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
+
+//
+
+
 const menuitems = [
+  { title: "Inicio", path: "/" },
   {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
-  },
-  {
-    title: "Pricing",
+    title: "Productos",
+    badge: true,
     path: "/pricing",
   },
   {
-    title: "About",
-    path: "/about",
+    title: "Redes",
+    path: "#",
+    children: [
+      { title: "Facebook", path: "/" },
+      { title: "Instagram", path: "#" },
+      { title: "Tiktok", path: "#" },
+      { title: "WhatsApp", path: "/" },
+    ],
   },
   {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-  {
-    title: "Pro Version",
-    badge: true,
-    path: "https://astroship-pro.web3templates.com/",
+    title: "Mas",
+    path: "#",
+    children: [
+      { title: "Sobre nosotros", path: "/about" },
+      { title: "Blog", path: "/developerPage" },
+      { title: "Contactanos", path: "/developerPage" },
+    ],
   },
 ];
 ---
@@ -43,10 +41,8 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
+        <a href="/" class="text-lg">
+          <img class="w-24" src="/logoBrand.png" alt="">
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -72,8 +68,8 @@ const menuitems = [
                       class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
                       <span> {item.title}</span>
                       {item.badge && (
-                        <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
-                          New
+                        <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-yellow-500 rounded-full">
+                          ;)
                         </span>
                       )}
                     </a>
@@ -91,8 +87,9 @@ const menuitems = [
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
+        {/*Login and sinIn */}
+        <a href="#"></a>
+        <!-- <Link href="#" size="md">Sign up</Link> -->
       </div>
     </div>
   </header>

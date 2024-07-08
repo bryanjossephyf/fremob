@@ -14,44 +14,36 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Sobre FREMØB</Fragment>
+      <Fragment slot="desc"></Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        Desde que comenzamos nos hemos visto como algo más que una marca; sino como un movimiento que fusiona la expresión individual con un medio de liberación de nuestra energía. Fremob es un proyecto fresco, audaz y vibrante que busca no solo vestir a las personas, sino también inspirarlos a llevar su esencia al siguiente nivel. Seguiremos fieles a estos ideales y por eso nos aseguramos que tanto nuestra ropa como el servicio siempre alcancen el siguiente nivel.
+
+
+
+        En FreMøB, usar un atuendo es mas que eso. Es un proceso completo, desde buscar hasta elegir un atuendo que potencie tu individualidad hasta encontrar nuevas formas de expresarte a través de tu vestimenta contandonos en el proceso lo que  piensas de tu compra final. Estamos aquí para ayudarte a disfrutar, así que no dudes en contactarnos si tienes preguntas, comentarios y sugerencias.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
+    <div class="w-60 mx-auto max-w-4xl mt-12">
+
+
           <div class="group">
             <div class="w-full aspect-square">
               <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
+                src="https://static.wixstatic.com/media/a7cdad_bd7ab97f2ce4475180be52890fabae1a~mv2.png/v1/fill/w_200,h_200,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Fremob.png"
+                alt="fremob-brand"
                 sizes="(max-width: 800px) 100vw, 400px"
                 width={400}
                 height={400}
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
+                class="w-full rounded-md transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
               />
             </div>
-
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
           </div>
-        ))
-      }
+
+
     </div>
   </Container>
 </Layout>

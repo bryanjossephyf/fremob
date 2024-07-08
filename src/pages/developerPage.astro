@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Sorry ;(, estamos en construcción...</Fragment>
+      <Fragment slot="desc"></Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+        <p class="text-lg  text-center leading-relaxed text-slate-500">
+            Suscribete, y te avisaremos cuando este terminado. ;)
+          </p>
+    </div>
+    <div class="w-60 mx-auto max-w-4xl mt-12">
+
+
+          <div class="group">
+            <div class="w-full aspect-square">
+              <Picture
+                src="/perrochamba.jpeg"
+                alt="fremob-brand"
+                sizes="(max-width: 800px) 100vw, 400px"
+                width={400}
+                height={400}
+                class="w-full rounded-md transition   bg-white object-cover object-center aspect-square"
+              />
+            </div>
+          </div>
+
+
+    </div>
+  </Container>
+</Layout>
