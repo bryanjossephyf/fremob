@@ -4,23 +4,23 @@ import { Icon } from "astro-icon/components";
 
 const features = [
   {
-    title: "Prendas de calidad",
+    title: "Estilo y Comodidad",
     description:
-      "Experimenta la verdadera comodidad con nuestra selección de prendas diseñadas para adaptarse perfectamente a tu estilo de baile",
+      "Descubre nuestra colección de ropa streetwear diseñada para brindarte libertad de movimiento y comodidad en cada paso.",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "Diseños unicos",
+    title: "Expresión sin límites",
     description:
-      "Explora nuestra colección exclusiva de diseños únicos, creados para destacar y expresar tu estilo individual con originalidad y sofisticación.",
+      "Nuestra ropa streetwear te permite expresarte sin restricciones, para que puedas moverte con total libertad en tu arte y baile.",
     icon: "bx:bxs-window-alt",
   },
   {
-    title: "Comodidad",
+    title: "Calidad y Durabilidad",
     description:
-      "Priorizamos tu confort en cada detalle. Descubre prendas diseñadas para ofrecerte la máxima comodidad, sin comprometer el estilo ni la funcionalidad. ",
+      "Confeccionamos nuestras prendas con los mejores materiales para garantizar que te acompañen en cada movimiento, manteniendo su calidad y estilo.",
     icon: "bx:bxs-data",
-  }
+  },
 ];
 ---
 
@@ -29,7 +29,9 @@ const features = [
     Diseñado para su comodidad y estilo
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Nuestra línea de ropa urbana está confeccionada con materiales de alta calidad y atención al detalle, garantizando un ajuste perfecto y una comodidad excepcional.
+    Nuestra línea de ropa urbana está confeccionada con materiales de alta
+    calidad y atención al detalle, garantizando un ajuste perfecto y una
+    comodidad excepcional.
   </p>
 </div>
 
@@ -37,7 +39,7 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-yellow-500 rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class="mt-1 bg-yellow-300 rounded-full  p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
@@ -48,3 +50,93 @@ const features = [
     ))
   }
 </div>
+{/* 2*/}
+<div class="mt-16">
+  <h3 class="font-semibold text-lg text-center mb-10 md:text-3xl">Muevete a tu estilo</h3>{" "}
+  <div class="flex flex-row overflow-hidden h-full">
+    <div class=" flex-1">
+      <!-- Imagen 1 -->
+      <img
+        src="/imageDerecho.png"
+        alt="bailarin"
+        class="rounded-lg"
+      />
+    </div>
+    <div class="flex-1 flex ">
+      <!-- Imagen 2 -->
+      <img
+        src="/bailarin1.jpg"
+        alt="bailarin"
+        class="rounded-lg mx-auto my-auto size-36 md:size-96 md:my-auto md:mx-auto "
+      />
+    </div>
+  </div>
+
+<!--   <div class="flex flex-row overflow-hidden ">
+    <div class=" flex-1 flex">
+      {/**Imagen1 */}
+      <img
+        src="/bailarin2.webp"
+        alt="bailarin"
+        class="rounded-lg mx-auto my-auto size-36 md:size-96"
+      />
+    </div>
+    <div class="flex-1">
+      {/**Imagen2 */}
+      <img
+        src="/imagenIzquierdo.png"
+        alt="bailarin"
+        class="rounded-lg mx-auto my-auto "
+      />
+    </div>
+  </div> -->
+</div>
+{/*3 */}
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/12/54/21/12542125ae253ba1b18fd8ba1b3e0dbc.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/35/7f/09/357f09a401c7f5412b0a78dce76c8fe0.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/bf/36/46/bf3646d7dba78f06cbb8cd59236b11f4.jpg" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/27/fc/e2/27fce27f2196933404c5f53d529c8555.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/9c/d3/4a/9cd34a0f54b98c1f70ef15994c92b782.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/d0/41/d6/d041d6ca09ebc26d096b9cb20fac5e88.jpg" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/0e/0b/84/0e0b847e626366a585e95290d5c4ae82.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/c9/16/d5/c916d5f6fb2512e943ea03c4f18e532e.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/e6/d7/86/e6d786a52f31bcabaaaed9be7cab02f3.jpg" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/9e/d5/30/9ed530f1c06496526d4c90b537a17d35.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/f2/bd/1a/f2bd1a8165aa70b6140551154292f059.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/8f/89/52/8f89524d142b83611df950ac039c518d.jpg" alt="">
+      </div>
+  </div>
+</div>
+
+
