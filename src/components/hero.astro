@@ -3,27 +3,37 @@ import { Picture } from "astro:assets";
 import heroImage from "assets/heroimage.png";
 import backHero from "../../public/backHero.png"
 import Link from "@components/ui/link.astro";
-import { Icon } from "astro-icon/components";
+import TransitionEffect from "@components/react/TransitionEffect.jsx";
+import {motion} from "framer-motion"
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <!-- <TransitionEffect client:load /> -->
   <div class="py-6 md:order-1 mb-5 md:block relative">
-    <Picture src={backHero} alt="asd"  class="absolute inset-0 z-0"/> 
+    <motion.div 
+      initial={{opacity:0}} 
+      animate={{opacity:1}}
+      transition={{delay:1}} 
+      client:load>
+      <Picture src={backHero} alt="asd"  class="absolute inset-0 z-0"/> {/*background */}
+    </motion.div>
+
     <Picture  
       src={heroImage}
-      alt="Astronaut in the air"
+      alt="bailarin"
       widths={[200, 400, 600]}
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
       format="avif"
       class="filter grayscale"
-    />
+    /> {/*ImageHero */}
+
+
   </div>
   <div>
     <h1
-      class="text-4xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Siente la libertad con tu movimientØ.
+      class="text-4xl lg:text-7xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Libera tu movimiento, encuentra tu estilo único con FremØb.
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
       Ten un estilo autentico y sientete comódo a la hora de vestirte 
@@ -33,7 +43,7 @@ import { Icon } from "astro-icon/components";
         href="#"
         href="/"
         target="_blank"
-        class="flex gap-1 items-center justify-center hover:bg-white hover:text-yellow-300 hover:border-yellow-300"
+        class="flex gap-1 items-center justify-center hover:bg-white hover:text-yellow-300 hover:border-yellow-300 rounded-lg"
         rel="noopener">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +55,6 @@ import { Icon } from "astro-icon/components";
             d="m229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32M40 112a72 72 0 1 1 72 72a72.08 72.08 0 0 1-72-72"
           ></path></svg
         >
-
         Explorar más
       </Link>
       <Link
@@ -53,7 +62,7 @@ import { Icon } from "astro-icon/components";
         style="outline"
         rel="noopener"
         href="/"
-        class="flex gap-1 items-center justify-center bg-yellow-300"
+        class="flex gap-1 items-center justify-center bg-yellow-300 rounded-lg"
         target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -80,4 +89,5 @@ import { Icon } from "astro-icon/components";
       </Link>
     </div>
   </div>
+  
 </main>

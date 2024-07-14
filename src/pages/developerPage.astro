@@ -19,27 +19,25 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-        <p class="text-lg  text-center leading-relaxed text-slate-500">
-            Suscribete, y te avisaremos cuando este terminado. ;)
-          </p>
+      <p class="text-lg text-center leading-relaxed text-slate-500">
+        Suscribete, y te avisaremos cuando este terminado. ;)
+      </p>
     </div>
     <div class="w-60 mx-auto max-w-4xl mt-12">
-
-
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src="/perrochamba.jpeg"
-                alt="fremob-brand"
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md transition   bg-white object-cover object-center aspect-square"
-              />
-            </div>
-          </div>
-
-
+      <div class="group">
+        <div class="w-full aspect-square">
+          <Picture
+            src="/perrochamba.jpeg"
+            alt="fremob-brand"
+            sizes="(max-width: 800px) 100vw, 400px"
+            width={400}
+            height={400}
+            class="w-full rounded-md transition bg-white object-cover object-center aspect-square"
+          />
+        </div>
+      </div>
     </div>
+
+
   </Container>
 </Layout>

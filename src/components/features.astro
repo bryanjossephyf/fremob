@@ -1,7 +1,7 @@
 ---
+
 // @ts-ignore
 import { Icon } from "astro-icon/components";
-
 const features = [
   {
     title: "Estilo y Comodidad",
@@ -21,6 +21,12 @@ const features = [
       "Confeccionamos nuestras prendas con los mejores materiales para garantizar que te acompañen en cada movimiento, manteniendo su calidad y estilo.",
     icon: "bx:bxs-data",
   },
+  {
+    title: "Diseños Únicos",
+    description:
+      "Diseñamos nuestras prendas para personas autenticas, cada diseño tiene una historia de transfondo que puedes interpretar a tu manera.",
+    icon: "bx:bxs-briefcase",
+  },
 ];
 ---
 
@@ -35,108 +41,275 @@ const features = [
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-yellow-300 rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-        </div>
-      </div>
-    ))
-  }
-</div>
-{/* 2*/}
-<div class="mt-16">
-  <h3 class="font-semibold text-lg text-center mb-10 md:text-3xl">Muevete a tu estilo</h3>{" "}
-  <div class="flex flex-row overflow-hidden h-full">
-    <div class=" flex-1">
-      <!-- Imagen 1 -->
+<section class="flex-col flexCenter bg-feature-bg bg-center bg-no-repeat py-24">
+  <div class="max-container padding-container relative w-full flex justify-end">
+    <div class="flex flex-1 lg:min-h-[900px]">
       <img
-        src="/imageDerecho.png"
-        alt="bailarin"
-        class="rounded-lg"
+        src="/phonefeature.png"
+        alt="phone"
+        width={440}
+        height={1000}
+        class="rotate-12 w-[420px] h-[750px]"
       />
     </div>
-    <div class="flex-1 flex ">
-      <!-- Imagen 2 -->
-      <img
-        src="/bailarin1.jpg"
-        alt="bailarin"
-        class="rounded-lg mx-auto my-auto size-36 md:size-96 md:my-auto md:mx-auto "
-      />
+
+    <div class="z-20 flex w-full flex-col lg:w-[60%]">
+      <div class="relative">
+        <img
+          src="/corona.jpg"
+          alt="corona"
+          width={40}
+          height={40}
+          class="absolute left-[-5px] top-[-40px] w-10 lg:w-[50px]"
+        />
+        <h2
+          class="bold-40 lg:bold-64 text-4xl lg:text-5xl font-bold lg:tracking-tight">
+          ¿Por que nos hace unicos?
+        </h2>
+      </div>
+      <div class="mt-10 grid gap-10 md:grid-cols-2 lg:mg-20 lg:gap-20">
+        {
+          features.map((item) => (
+            <div class="flex gap-4 items-start">
+              <div class="mt-1 bg-yellow-300 rounded-full  p-2 w-8 h-8 shrink-0">
+                <Icon class="text-white" name={item.icon} />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
+</section>
 
-<!--   <div class="flex flex-row overflow-hidden ">
-    <div class=" flex-1 flex">
-      {/**Imagen1 */}
+{/* 2 only mobile*/}
+
+<div class="md:hidden lg:hidden xl:hidden">
+  <div class="z-20 flex w-full flex-col lg:w-[60%]">
+    <div class="relative">
       <img
-        src="/bailarin2.webp"
-        alt="bailarin"
-        class="rounded-lg mx-auto my-auto size-36 md:size-96"
+        src="/planeta.jpg"
+        alt="planeta"
+        class="absolute left-[290px] top-[-45px] w-10 lg:w-[50px] rotate-90"
       />
+      <h2
+        class="bold-40 mb-10 text-center lg:bold-64 text-4xl lg:text-5xl font-bold lg:tracking-tight">
+        Mueve a tu estilo
+      </h2>
     </div>
-    <div class="flex-1">
-      {/**Imagen2 */}
-      <img
-        src="/imagenIzquierdo.png"
-        alt="bailarin"
-        class="rounded-lg mx-auto my-auto "
-      />
+    <div
+      class="b bg-pattern bg-center bg-no-repeat bg-cover flex rounded-[40px] lg:rounded-[80px] h-[700px] flex-col">
+      <div class="px-10 pt-10">
+        <h3 class="text-white font-semibold text-4xl">Siente la experiencia</h3>
+        <p class="text-white font-semibold text-lg">
+          Caracteristicas del producto
+        </p>
+      </div>
+      <div class="h-full w-full overflow-hidden">
+        <img src="/caracteristicas2.png" alt="caracteristicas" />
+      </div>
     </div>
-  </div> -->
+  </div>
 </div>
+
 {/*3 */}
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-  <div class="grid gap-4">
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/12/54/21/12542125ae253ba1b18fd8ba1b3e0dbc.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/35/7f/09/357f09a401c7f5412b0a78dce76c8fe0.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/bf/36/46/bf3646d7dba78f06cbb8cd59236b11f4.jpg" alt="">
-      </div>
+<div class="mt-10 md:mt-0">
+  <div class="relative hidden md:block">
+    <img
+      src="/planeta.jpg"
+      alt="planeta"
+      class="absolute left-[790px] top-[-45px] w-10 lg:w-[50px] rotate-90"
+    />
+    <h2
+      class="bold-40 mb-10 text-center lg:bold-64 text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      Mueve a tu estilo
+    </h2>
   </div>
-  <div class="grid gap-4">
+  <div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="grid gap-4">
       <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/27/fc/e2/27fce27f2196933404c5f53d529c8555.jpg" alt="">
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/12/54/21/12542125ae253ba1b18fd8ba1b3e0dbc.jpg"
+          alt=""
+        />
       </div>
       <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/9c/d3/4a/9cd34a0f54b98c1f70ef15994c92b782.jpg" alt="">
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/35/7f/09/357f09a401c7f5412b0a78dce76c8fe0.jpg"
+          alt=""
+        />
       </div>
       <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/d0/41/d6/d041d6ca09ebc26d096b9cb20fac5e88.jpg" alt="">
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/bf/36/46/bf3646d7dba78f06cbb8cd59236b11f4.jpg"
+          alt=""
+        />
       </div>
-  </div>
-  <div class="grid gap-4">
+    </div>
+    <div class="grid gap-4">
       <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/0e/0b/84/0e0b847e626366a585e95290d5c4ae82.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/c9/16/d5/c916d5f6fb2512e943ea03c4f18e532e.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/e6/d7/86/e6d786a52f31bcabaaaed9be7cab02f3.jpg" alt="">
-      </div>
-  </div>
-  <div class="grid gap-4">
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/9e/d5/30/9ed530f1c06496526d4c90b537a17d35.jpg" alt="">
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/27/fc/e2/27fce27f2196933404c5f53d529c8555.jpg"
+          alt=""
+        />
       </div>
       <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/f2/bd/1a/f2bd1a8165aa70b6140551154292f059.jpg" alt="">
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/9c/d3/4a/9cd34a0f54b98c1f70ef15994c92b782.jpg"
+          alt=""
+        />
       </div>
       <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://i.pinimg.com/736x/8f/89/52/8f89524d142b83611df950ac039c518d.jpg" alt="">
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/d0/41/d6/d041d6ca09ebc26d096b9cb20fac5e88.jpg"
+          alt=""
+        />
       </div>
+    </div>
+    <div class="grid gap-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/0e/0b/84/0e0b847e626366a585e95290d5c4ae82.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/c9/16/d5/c916d5f6fb2512e943ea03c4f18e532e.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/e6/d7/86/e6d786a52f31bcabaaaed9be7cab02f3.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/9e/d5/30/9ed530f1c06496526d4c90b537a17d35.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/f2/bd/1a/f2bd1a8165aa70b6140551154292f059.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          class="h-auto max-w-full rounded-lg"
+          src="https://i.pinimg.com/736x/8f/89/52/8f89524d142b83611df950ac039c518d.jpg"
+          alt=""
+        />
+      </div>
+    </div>
   </div>
 </div>
 
+{/*4 */}
 
+{/* <div id="gallery" class="relative w-full border border-red-600" data-carousel="slide"> 
+  <!-- Carousel wrapper -->
+  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+    <!-- Item 1 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img
+        src="1.png"
+        class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt=""
+      />
+    </div>
+    <!-- Item 2 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+      <img
+        src="2.png"
+        class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt=""
+      />
+    </div>
+    <!-- Item 3 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img
+        src="3.png"
+        class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt=""
+      />
+    </div>
+    <!-- Item 4 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img
+        src="4.png"
+        class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt=""
+      />
+    </div>
+  </div>
+  <!-- Slider controls -->
+  <button
+    type="button"
+    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-prev>
+    <span
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+      <svg
+        class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 6 10">
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 1 1 5l4 4"></path>
+      </svg>
+      <span class="sr-only">Previous</span>
+    </span>
+  </button>
+  <button
+    type="button"
+    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-next>
+    <span
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+      <svg
+        class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 6 10">
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 9 4-4-4-4"></path>
+      </svg>
+      <span class="sr-only">Next</span>
+    </span>
+  </button>
+</div>
+*/}
