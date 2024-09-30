@@ -3,9 +3,7 @@ import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
-import '@fontsource-variable/bricolage-grotesque';
-
-
+import "@fontsource-variable/bricolage-grotesque";
 
 export interface Props {
   title: string;
@@ -13,25 +11,33 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/hero2.jpg",
-  Astro.site
-).toString();
+const resolvedImageWithDomain = new URL("/hero2.jpg", Astro.site).toString();
 
 const { title } = Astro.props;
 
-const makeTitle = title
-  ? title + " | " + "Fremob"
-  : "Fremob";
+const makeTitle = title ? title + " | " + "Fremob" : "Fremob";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-GWBVX1T4CY"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-GWBVX1T4CY");
+    </script>
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
@@ -65,6 +71,8 @@ const makeTitle = title
         scroll-behavior: smooth;
       }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"
+    ></script>
   </body>
 </html>
