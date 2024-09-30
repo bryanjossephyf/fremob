@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
 Sitemap: https://fremob.vercel.app/sitemap-index.xml
+=======
+Sitemap: https://fremob.vercel.app/sitemap-index.xml
+>>>>>>> d5a301e69ae6dd0020b0b54bc4493838839453cf
