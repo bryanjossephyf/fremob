@@ -10,4 +10,4 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://fremob.vercel.app/",
   integrations: [tailwind(), mdx(), sitemap(), icon(), react(), sitemap()]
-});
+}); 
